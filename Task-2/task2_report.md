@@ -3,8 +3,6 @@
 **Program:** B.Tech Computer Science & Engineering (Artificial Intelligence)  
 **Institution:** ICFAI Tech School (IFHE Hyderabad)  
 **Admission Batch:** 2023 Batch  
-**Target Role:** Entry-Level AI Automation & Agent Engineering Intern  
-**Date:** October 23, 2026  
 
 ---
 
