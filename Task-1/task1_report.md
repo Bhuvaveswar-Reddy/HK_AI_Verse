@@ -222,6 +222,4 @@ This was my first time formally mapping out a process and thinking about how to 
 
 ---
 
-*Test implementation: `scripts/task1_workflow.py` — 5 test cases, all passing.*
-*Effort model: `scripts/task1_model.py`*
 
