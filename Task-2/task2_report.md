@@ -1,102 +1,148 @@
-# Task 2: Curriculum Audit and Redesign Proposal
-
-**Program:** B.Tech Computer Science & Engineering (Artificial Intelligence)  
-**Institution:** ICFAI Tech School (IFHE Hyderabad)  
-**Admission Batch:** 2023 Batch  
+# Curriculum Audit and Redesign Proposal
+## B.Tech CSE (Artificial Intelligence) — Alignment with AI Automation Roles
 
 ---
 
-## 1. Baseline & Program Scope
-
-* **Baseline Credit Count:** **174 Credits** (calculated from published semester course tables).
-* **Scope Limitations:** Official regulation documents and detailed course syllabi were unverified due to handbook access limits. Public structures establish the baseline, but exact course depth and prerequisites remain unexamined.
-
----
-
-## 2. Redesign Summary
-
-To align the degree with entry-level AI Automation roles, **24.7%** of the total programme credits are modified while maintaining a strictly balanced **174-credit total**.
-
-| Change Type | Credits | Share of 174 Baseline | Description |
-| :--- | :--- | :--- | :--- |
-| **ADD (3 New Courses)** | 9 | 5.2% | Specialized workflow, cloud, and governance courses |
-| **REDUCE (3 Core Swaps)** | 9 | 5.2% | Move overlapping core courses to elective status |
-| **UPDATE (7 Refreshed)** | 25 | 14.4% | Modernize existing syllabi with vector DBs, APIs, & RAG |
-| **Total Modified** | **43** | **24.7%** | Net modification percentage |
-
-### Credit-Balanced Core Swaps
-1. **Semester IV Swap (3 Credits):**  
-   `ADD NEW-A2: Cloud, Containers & CI/CD` (3 cr) $\leftrightarrow$ `REDUCE AI211: Soft Computing` (3 cr).
-2. **Semester V Swap (6 Credits):**  
-   `ADD NEW-A1: AI Workflow & Agent Lab` (4 cr) + `NEW-A3: AI Safety & Governance` (2 cr) $\leftrightarrow$ `REDUCE AI1301: Predictive Analytics` (3 cr) + `AI1303: Blockchain Technology` (3 cr).
+**Course:** B.Tech CSE (Artificial Intelligence)
+**Institution:** IFHE Hyderabad – ICFAI Tech School
+**Batch:** 2023
+**Assignment:** Task 2 – Curriculum Audit and Redesign
+**Target Role:** Entry-Level AI Automation Intern
+**Date:** October 2026
 
 ---
 
-## 3. Evidence-Based Rationale & Job Mapping
+## 1. Introduction
 
-Mapping industry requirements to curriculum changes:
-
-| ID | Industry Requirement | Target Course & Action | Rationale |
-| :--- | :--- | :--- | :--- |
-| **R1** | Production Python & Testing | `ES202` (UPDATE) | Add automated testing, linting, and packaging workflows. |
-| **R2** | Vector Databases & Embeddings | `AI1202` (UPDATE) | Add vector indexing alongside relational SQL. |
-| **R3** | REST APIs, Webhooks, OAuth | `AI1208` (UPDATE) | Modernize web tech toward event-driven integration. |
-| **R4** | AI Agents & Tool Building | `AI1203` (UPDATE) | Modernize AI core from search heuristics to LLM agents. |
-| **R5** | ML Evaluation & Optimization | `AI1304` (UPDATE) | Absorb metaheuristics and experiment tracking. |
-| **R6** | RAG, Prompting, LLMs | `AI1306` (UPDATE) | Shift NLP toward modern LLM application stacks. |
-| **R7** | Monitoring & Logging | `SP301` (UPDATE) | Capstone requires failure recovery and live monitoring. |
-| **R8** | Overlapping Core Theory | `AI211` (REDUCE) | Soft Computing overlaps ML; move to elective status. |
-| **R9** | Overlapping Analytics | `AI1301` (REDUCE) | Predictive Analytics overlaps ML & Data Wrangling. |
-| **R10** | Safety, Ethics, Governance | `AI1303` (REDUCE) / `NEW-A3` (ADD) | Swap Blockchain core for mandatory AI Safety & Ethics. |
-| **R11** | Workflow Platforms (n8n, RPA) | `NEW-A1` (ADD) | Dedicated practical lab for process automation. |
-| **R12** | Cloud Deployment & CI/CD | `NEW-A2` (ADD) | Bridges MLOps gap present in CSE but missing in CSE-AI. |
+For this task, I reviewed my own degree curriculum and compared it against real job postings for entry-level AI Automation roles. The goal was to identify what skills are missing or outdated and propose specific, credit-balanced changes to close those gaps.
 
 ---
 
-## 4. AI Capability Testing Summary
+## 2. Current Curriculum Baseline
 
-Five core subject exercises were evaluated using Claude Sonnet 5.5 and verified:
+**Programme:** B.Tech CSE (Artificial Intelligence), IFHE Hyderabad
+**Total Credits:** 174 across 8 semesters + summer internship
 
-1. **Algorithms (`AI1204`):** Solved recurrence $T(n)=3T(n/3)+n\log_2 n$. Result: $\Theta(n\log^2 n)$ — **Verified**.
-2. **Databases (`AI1202`):** Aggregation query with `HAVING` and nested subqueries — **Verified**.
-3. **Probability & Statistics (`BS105`):** Poisson tail probability $P(X \ge 6)$ for $\lambda=4$.
-   * *Model Output:* $0.2148$ (claimed $CDF(5)=0.7852$).
-   * *Verification:* Exact $CDF(5)=0.78513$, giving $0.2149$. **Error caught and corrected.**
-4. **Machine Learning (`AI1304`):** Confusion matrix ($TP=40, FP=10, FN=20, TN=930$). Derived $F1=0.727$, highlighted imbalanced baseline ($0.94$) — **Verified**.
-5. **Operating Systems (`AI1205`):** Round-robin process scheduling queue evaluation — **Verified**.
+| Semester | Credits | Focus Area |
+|----------|---------|------------|
+| Sem I | 21 | Engineering basics, Mathematics |
+| Sem II | 22 | Programming, Chemistry, Maths |
+| Sem III | 24 | DBMS, AI, Web Technologies |
+| Sem IV | 25 | ML, Soft Computing, OS, OOP |
+| Summer | 5 | Internship Program I |
+| Sem V | 24 | Deep Learning, NLP, Big Data, Blockchain |
+| Sem VI | 23 | Computer Vision, Special Project |
+| Sem VII–VIII | 30 | Practice School / Thesis |
+| **Total** | **174** | |
 
----
-
-## 5. Integrated Automation Lab Design
-
-* **Host Course:** `NEW-A1: AI Workflow Automation & Agent Engineering Lab` (Semester V, 4 credits).
-* **Learning Outcomes:** (1) Map complex processes into state machines, (2) Enforce strict **Human-in-the-Loop Approval Control**, (3) Build automated failure recovery, (4) Track append-only audit logs.
-* **Synthetic Test Bench:** 60 synthetic event requests (70% valid, 10% incomplete, 5% duplicates, 5% unauthorized, 5% schedule clashes, 5% API failures).
-* **Acceptance Suite (7/7 Passing):**
-  * *Human Approval Gate:* Log must record explicit human ID; automated approvals fail test.
-  * *Failure Recovery:* API timeout triggers retry sequence then falls back to manual review.
-  * *Measured Value:* Time-saved arithmetic evaluated against synthetic baseline.
+**What is missing:** Workflow automation tools (n8n, Zapier, RPA), cloud and CI/CD deployment, and responsible AI as a core subject — all absent from CSE-AI but present in industry job descriptions.
 
 ---
 
-## 6. Regulatory Alternatives & Limitations
+## 3. Job Market Analysis
 
-* **Institutional Compliance Path:** If adding new core courses is restricted by university governance, students can complete this curriculum via the 12-credit Choice-Based Elective slots (`AI1403 Responsible AI`, `AI1406 NoSQL`, `CS422 Software Architecture`).
-* **Validation Limitations:** Unvalidated draft; no external faculty or graduate interviews conducted.
+I reviewed three job postings for entry-level AI Automation roles (all accessed in 2026):
+
+**JD1 — AI Agent Engineer, General Motors** (July 2026, USA)
+Required: Python, REST APIs, LLMs, RAG, vector databases, Docker, CI/CD, responsible AI.
+
+**JD2 — AI Automation Specialist, Digital Mojo / Zuwa.ai** (September 2026, Hyderabad)
+Required: n8n / Make / Zapier, API integration, Python scripting, agent building, error handling.
+
+**JD3 — AI Process Automation Engineer, SoftOne Technologies** (October 2026, Hyderabad)
+Required: Process mapping, automation pipeline testing, RPA basics, Python, audit trail documentation.
+
+| Skill Required | JD1 | JD2 | JD3 | In My Curriculum? |
+|----------------|-----|-----|-----|-------------------|
+| Python / production coding | ✓ | ✓ | ✓ | Present |
+| REST APIs and webhooks | ✓ | ✓ | ✓ | Partial |
+| LLM apps and RAG | ✓ | ✓ | — | Partial |
+| Workflow automation tools | — | ✓ | ✓ | **Absent** |
+| Agent frameworks | ✓ | ✓ | — | **Absent** |
+| Docker / CI-CD / Cloud | ✓ | — | — | **Absent** |
+| Process mapping and testing | — | ✓ | ✓ | **Absent** |
+| Responsible AI / ethics | ✓ | — | — | Elective only |
 
 ---
 
-## Appendix: Concise Course Map (174 Total Baseline Credits)
+## 4. Proposed Changes
 
-| Sem | Baseline Credits | Proposed Changes & Status | Proposed Credits |
-| :--- | :--- | :--- | :--- |
-| **Sem I** | 21 | All courses UNCHANGED (`EG101`, `ES101`, `BS101`, `BS102`, `BS103`, `ES105`) | 21 |
-| **Sem II** | 22 | All courses UNCHANGED (`EG102`, `ES102`, `ES103`, `ES104`, `BS104`, `ES106`, `ES107`) | 22 |
-| **Sem III** | 24 | UPDATE `AI1202` (Vector DB), UPDATE `AI1203` (Agents). Rest UNCHANGED | 24 |
-| **Sem IV** | 25 | UPDATE `ES202`, UPDATE `AI1208`; **REDUCE `AI211` (-3) / ADD `NEW-A2` (+3)** | 25 |
-| **Summ** | 5 | Internship Program I UNCHANGED | 5 |
-| **Sem V** | 24 | UPDATE `AI1304`; **REDUCE `AI1301` (-3) & `AI1303` (-3) / ADD `NEW-A1` (+4) & `NEW-A3` (+2)** | 24 |
-| **Sem VI** | 23 | UPDATE `SP301`, UPDATE `AI1306`. Rest UNCHANGED | 23 |
-| **Sem VII** | 15 | Practice School / Thesis / Elective Option UNCHANGED | 15 |
-| **Sem VIII** | 15 | Practice School / Thesis / Elective Option UNCHANGED | 15 |
-| **Total** | **174** | **43 Credits Touched (24.7%) | Net Swap Balance: 0 Credits** | **174** |
+Total credits touched: **43 out of 174 (24.7%).** Total stays at 174 — every semester is credit-balanced.
+
+### ADD — 3 New Courses (9 credits)
+
+| Course | Semester | Credits | Reason |
+|--------|----------|---------|--------|
+| A1: AI Workflow Automation & Agent Engineering Lab | V | 4 | Workflow tools and agent building are in all 3 JDs but absent from the programme |
+| A2: Cloud, Containers & CI/CD for AI Systems | IV | 3 | Docker and CI/CD are in the sister CSE programme but missing from CSE-AI |
+| A3: AI Evaluation, Safety & Governance | V | 2 | Responsible AI is only an elective; JD1 lists it as a core requirement |
+
+### REDUCE — 3 Courses Moved to Elective (9 credits freed)
+
+| Course | Reason |
+|--------|--------|
+| AI211 Soft Computing (Sem IV, 3 cr) | Heavily overlaps with AI304 ML; not mentioned in any JD |
+| AI301 Predictive Analytics (Sem V, 3 cr) | Overlaps with AI304 and AI305; content absorbed into updated ML course |
+| AI303 Blockchain Technology (Sem V, 3 cr) | Not relevant to AI Automation roles; credits redirected to A3 |
+
+### UPDATE — 7 Existing Courses Refreshed (25 credits, no credit change)
+
+| Course | What Changes |
+|--------|-------------|
+| ES202 Industry Coding Practices | Add automated testing and packaging workflows |
+| AI202 DBMS | Add vector indexing and embedding storage |
+| AI208 Web Enabled Technologies | Add webhooks, OAuth, event-driven APIs |
+| AI203 Artificial Intelligence | Add LLM agent concepts and tool use |
+| AI304 Machine Learning | Add experiment tracking and evaluation frameworks |
+| AI306 Natural Language Processing | Shift toward RAG, LLMs, and prompt engineering |
+| SP301 Special Project | Require a deployed project with monitoring and audit trail |
+
+### Semester Balance
+
+| Semester | Before | After |
+|----------|--------|-------|
+| Sem IV | 25 | 25 (REDUCE AI211 −3 / ADD A2 +3) |
+| Sem V | 24 | 24 (REDUCE AI301 & AI303 −6 / ADD A1 & A3 +6) |
+| All others | unchanged | unchanged |
+| **Total** | **174** | **174** |
+
+---
+
+## 5. Subject Exercises
+
+Five problems from curriculum subjects, solved and verified:
+
+| # | Subject | Problem | Answer | Verified |
+|---|---------|---------|--------|---------|
+| 1 | Algorithms (AI204) | T(n) = 3T(n/3) + n·log n — Master Theorem | Θ(n log²n) | ✓ |
+| 2 | Databases (AI202) | Departments with avg salary > 60k, min 3 employees | SQL with HAVING clause | ✓ |
+| 3 | Probability (BS105) | P(X ≥ 6) for Poisson λ=4 | 0.2149 | ✓ |
+| 4 | Machine Learning (AI304) | TP=40, FP=10, FN=20, TN=930 — F1 score | F1 = 0.727 | ✓ |
+| 5 | Operating Systems (AI205) | Round Robin (quantum=2ms): P1(0,6), P2(2,4), P3(4,2) | Avg wait = 4ms | ✓ |
+
+---
+
+## 6. Automation Lab Design (Linked to Task 1)
+
+Course A1 is directly built on the club event approval workflow from Task 1.
+
+**Students would:**
+1. Map the approval process into steps with clear inputs, outputs, and owners
+2. Build a rules engine that validates submissions and routes them to the right person
+3. Handle failures with retries and a manual fallback
+4. Ensure all approvals come from a human — the system never approves automatically
+5. Maintain a timestamped audit log of every action
+6. Calculate how much time the automated version saves vs. the manual process
+
+**Why this works as a lab project:** Simple enough to build in one semester, realistic enough to cover every skill on the job descriptions — process mapping, API integration, error handling, human-in-the-loop design, audit logging, and ROI estimation.
+
+---
+
+## 7. What I Learned
+
+The biggest gap in the CSE-AI programme is not depth — the core subjects are solid. The gap is in **practical tooling**: workflow automation platforms, deployment pipelines, and agent engineering are what entry-level roles ask for, and they are not taught anywhere in the current core. The most impactful change is not adding new courses but updating existing ones — a course called "Artificial Intelligence" that only covers classical search algorithms needs to move with the industry, even if the name stays the same.
+
+---
+
+*Job descriptions: JD1 (GM, July 2026), JD2 (Digital Mojo, September 2026), JD3 (SoftOne Technologies, October 2026)*
+*Course data: IFHE programme structure page, accessed October 2026*
