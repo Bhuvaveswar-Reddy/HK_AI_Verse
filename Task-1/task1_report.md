@@ -25,7 +25,7 @@
 
 ## 1. Introduction
 
-For this task, I chose to study the **club event approval process** at my college. I picked this process because it is something I have heard friends talk about many times — getting permission for a club event involves a lot of waiting and follow-up messages, and it felt like a good candidate for a simple digital improvement.
+For this task, I choose to study the **club event approval process** at my college. I picked this process because it is something I have heard friends talk about many times — getting permission for a club event involves a lot of waiting and follow-up messages, and it felt like a good candidate for a simple digital improvement.
 
 I spoke to friends who are club leaders to understand how the process currently works. This report documents what I learned, how I would improve it, and what impact that improvement could have.
 
